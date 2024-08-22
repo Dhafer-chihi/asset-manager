@@ -1,0 +1,42 @@
+<div class="card-product">
+    <div class="prod-dash">
+      <h3>List des clients</h3>
+      <button (click)="ajouter_client()" ><i class="fa-solid fa-plus"></i></button>
+    </div>
+    <div class="table-dash">
+      <table datatable  class="row-border">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Tele</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Particulier</td>
+            <td>ispace</td>
+            <td>email address</td>
+            <td>7100000</td>
+            <td>
+              <button class="delete"><i class="fa-solid fa-trash"></i><span class="tooltip">Supprimer</span></button>
+              <button class="show" (click)="afficher_client()"><i class="fa-solid fa-eye"></i><span class="tooltip">Afficher</span></button>
+              <button class="edit"><i class="fa-solid fa-user-pen"></i><span class="tooltip">Modifier</span></button>
+              <button class="print"><i class="fa-solid fa-print"></i><span class="tooltip">Imprimer</span></button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>  
+    
+    </div>
+    </div>
+    
+    
+    
+    
+    

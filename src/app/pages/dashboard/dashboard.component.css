@@ -1,0 +1,82 @@
+.card{}
+
+.card-dash{
+    
+}
+
+.card-dash .dash-title h3{
+    color: var(--dark-blue);
+    margin-bottom: 40px;
+}
+
+.card-dash .dash-body{
+    background: var(--ligth-blue);
+    width: 290px;
+    border-radius: 10px;
+    padding: 1.2rem;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-dash .dash-body:hover{
+    transform: translateY(-7px);
+}
+
+
+.card-dash .dash-body .title{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+.card-dash .dash-body .value{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-dash .dash-body .icon{
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    text-align: center;
+    background: var(--blue);
+    font-size: 21px;
+    border-radius: 50%;
+    color: white;
+    margin-left: 80%;
+
+}
+
+/* 
+.card-dash .dash-body i {
+    font-size: 30px;
+    display: block;
+    margin-left: 80%;
+
+
+} */
+
+.card-list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-bottom: 40px;
+}
+
+
+.card-chart{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+
+.dash-chart{
+    background-color: var(--grey);
+    width: 45%;
+    height: 280px;
+    border-radius: 10px;
+}

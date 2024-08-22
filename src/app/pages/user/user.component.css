@@ -1,0 +1,137 @@
+.card-product{}
+
+
+.prod-dash{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+table thead tr th{
+    text-align: left;
+}
+table tbody tr td {
+    text-align: left;
+}
+
+
+.prod-dash h3{
+    color: var(--dark-blue);
+    font-size:  20px;
+    font-weight: 700;
+}
+
+.prod-dash button{
+    background: var(--blue);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+
+
+}
+
+.prod-dash button i {
+    font-size: 30px;
+    color: var(--ligth);
+}
+
+table tr th:last-child{
+    width: 20%;
+}
+
+
+table tr td:last-child{
+    text-align: center;
+}
+
+table tr td:last-child button{
+    width: 30px;
+    height: 30px;
+}
+
+table tr td:last-child button i {
+    padding-top: 7px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+
+.delete {
+   
+    background: var(--red);
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    color:var(--ligth);
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.show{
+    background: var(--blue);
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    color:var(--ligth);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.edit{
+    background: orange;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    color:var(--ligth);
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.print{
+    background: var(--dark-grey);
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    color:white;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+
+.tooltip{
+   visibility: hidden;
+   
+   background-color:black;
+   color:white;
+   text-align: center;
+   border-radius: 5px;
+   padding: 5px;
+   margin-top: 30px;
+   margin-left: -40px;
+   position: absolute;
+   z-index: 1 ;
+   
+}
+
+
+
+
+.delete:hover .tooltip{
+    visibility: visible;
+  
+}
+.show:hover .tooltip{
+    visibility: visible;
+}
+.edit:hover .tooltip{
+    visibility: visible;
+}
+.print:hover .tooltip{
+    visibility: visible;
+}

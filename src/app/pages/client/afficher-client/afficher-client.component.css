@@ -1,0 +1,111 @@
+.title h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+.show-user{
+    display: flex;
+    padding: 40px 0 40px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-card{
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 40px;
+    width: 750px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 20px -5px rgba(0, 0, 0, 5);
+   
+}
+
+
+.user-card::before{
+    position: absolute ;
+    content: '';
+    height: 300%;
+    width: 173px;
+    background :var(--dark-blue);
+    top : -60px;
+    left :  -125px;
+    z-index: 0;
+    transform: rotate(17deg);
+}
+
+.card-user-img{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 60px;
+   z-index: 3;
+}
+
+.card-user-img img{
+    width: 150px;
+    height: 200px;
+    margin-top: 40px;
+    margin-left: 60px;
+    object-fit: cover;
+}
+
+.card-user-info{
+    text-align: center;
+}
+
+.card-user-info h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.card-user-info p {
+    font-size: 16px;
+    font-weight: 500px;
+    margin-bottom: 2px;
+}
+
+.card-user-info p span {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px ;
+}
+
+.card-button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.card-button button{
+    width: 70px;
+    height: 35px;
+    border-radius: 5px;
+    background: var(--dark-blue);
+    color: white;
+}
+
+
+@media only screen and (min-width : 768px){
+    .user-card{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .card-user-img{
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .card-user-info{
+        margin-top: 60px;
+        margin-left: 30px;
+        text-align: left;
+    }
+}
+    
