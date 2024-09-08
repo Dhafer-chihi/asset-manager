@@ -26,12 +26,8 @@ export class UserComponent implements OnInit{
     };
     
     this.getAllUsers()
-
   }
-  loadOne(){
-    window.location.reload()
-  }
-
+  
   getAllUsers(){
 
     this.userServices.getUsers().subscribe({
