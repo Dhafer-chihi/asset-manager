@@ -7,13 +7,13 @@ import { produit } from '../shared/prduit.interface';
 })
 export class ProduitService {
 
-  Api_server = "http://localhost:3000"
+  api_url = "https://asset-manager-back.vercel.app"
   constructor(private httpClient: HttpClient) { }
   getProducts(){
-    return this.httpClient.get<produit[]>(`${this.Api_server}/produits`)
+    return this.httpClient.get<produit[]>(`${this.api_url}/produits`)
   }
 
   addProduct(prod : produit){
-    return this.httpClient.post(`${this.Api_server}/produits` , prod)
+    return this.httpClient.post(`${this.api_url}/produits` , prod)
   }
 }

@@ -6,7 +6,7 @@ import { user } from '../shared/user.interface';
   providedIn: 'root'
 })
 export class UserService {
-  api_url="http://localhost:3000"
+  api_url="https://asset-manager-back.vercel.app"
   constructor(private httpClient : HttpClient) { }
   getUsers(){
     return this.httpClient.get<user[]>(`${this.api_url}/user`)
