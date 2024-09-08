@@ -4,7 +4,7 @@
   <button (click)="ajouter_prod_link()"><i class="fa-solid fa-plus"></i></button>
 </div>
 <div class="table-dash">
-  <table datatable  class="row-border">
+  <table datatable  class="row-border hover">
     <thead>
       <tr>
         <th>Ticket</th>
@@ -12,16 +12,19 @@
         <th>Produit</th>
         <th>SN</th>
         <th>Date</th>
+        <th>Niveau</th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
+     @for (product of products; track $index) {
       <tr>
-        <td>1</td>
-        <td>iMac</td>
-        <td>iMac 27</td>
-        <td>C02NFSHKA</td>
-        <td>01-02-2025</td>
+        <td>{{i}}</td>
+        <td>{{product.cat}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.sn}}</td>
+        <td>{{product.date_ajout | date:'d-M-YY'}}</td>
+        <td>{{product.niveau}}</td>
         <td>
           <button class="delete"><i class="fa-solid fa-trash"></i><span class="tooltip">Supprimer</span></button>
           <button class="show" (click)="afficher_produit()"><i class="fa-solid fa-eye"></i><span class="tooltip">Afficher</span></button>
@@ -29,6 +32,7 @@
           <button class="print"><i class="fa-solid fa-print"></i><span class="tooltip">Imprimer</span></button>
         </td>
       </tr>
+     }
       
     </tbody>
   </table>  
