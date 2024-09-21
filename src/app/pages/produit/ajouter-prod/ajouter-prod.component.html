@@ -6,65 +6,76 @@
     <form  [formGroup]="productForm" (ngSubmit)="addProduct()">
         <h3>Nouveau produit</h3>
         <hr>
-        <div class="input-box-ticket">
-            <label for="">Ticket</label>
-            <input type="text"  readonly value="11">
-        </div>
         <div class="add-details">
+            <div class="input-box">
+                <span>Ticket</span>
+                <input type="text" value="" readonly required>
+            </div>
+
+            <div class="input-box">
+                <span>Note</span>
+                <textarea name="" id="" formControlName="note" placeholder="Note"></textarea>
+            </div>
+            
+            <div class="input-box">
+                <span>Client</span>
+                <select name="cat" id="cat" required formControlName="clientId">
+                    <option value="">--Select Client--</option> 
+                    <option *ngFor="let client of clients" [ngValue]="client">{{client.fullname}}</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <span>Accessoires</span>
+                <textarea name="" id="" formControlName="accessoire" placeholder="Accessoires avec le produit"></textarea>
+            </div>
+            
             
             <div class="input-box">
                 <span>Categorie</span>
                 <select name="cat" id="cat" required formControlName="cat">
                     <option value="">--Select categorie--</option>
-                    @for (c of categorie; track $index) {
-                        <option [value]="c">{{c}}</option>
-                    }
-                    
-                    
+                    <option *ngFor=" let category of cat" [ngValue]="category.name">{{category.name}}</option> 
                 </select>
-            </div>
-            <div class="input-box">
-                <span>Etat produit</span>
-                <textarea name="" id="" formControlName="etat" placeholder="Etat de produit"></textarea>
-            </div>
-            <div class="input-box">
-                <span>Nom du produit</span>
-                <input type="text"  formControlName="name" placeholder="Tapez le nom du produit" required>
-            </div>
-            <div class="input-box">
-                <span>Accessoires</span>
-                <textarea name="" id="" formControlName="acces" placeholder="Accessoires avec le produit"></textarea>
-            </div>
-            <div class="input-box">
-                <span>Numéro de serie</span>
-                <input type="text" formControlName="sn" placeholder="Tapez le numéro de serie" required>
             </div>
             <div class="input-box">
                 <span>Nature panne (client)</span>
                 <textarea name="" id="" formControlName="panne" placeholder="Nature de la panne"></textarea>
             </div>
+            
+           
+            
+
+            
             <div class="input-box">
-                <span>Mot de passe</span>
-                <input type="text" name="" id="" formControlName="pwd" placeholder="Mot de passe">
-            </div> 
+                <span>Nom du produit</span>
+                <input type="text"  formControlName="name" placeholder="Tapez le nom du produit" required>
+            </div>
             <div class="input-box">
                 <span>Diagnostic (technicien)</span>
                 <textarea name="" id="" formControlName="diag" placeholder="Resultat de diagnostic"></textarea>
             </div>
+
+            
             <div class="input-box">
-                <span>Date d'ajout</span>
-                <input type="date" name="" id="" formControlName="d_ajout" placeholder="Date d'aujoud'hui">
+                <span>Numéro de serie</span>
+                <input type="text" formControlName="sn" placeholder="Tapez le numéro de serie" required>
             </div>
+
+            
+            
             <div class="input-box">
-                <span>Note</span>
-                <textarea name="" id="" formControlName="note" placeholder="Note"></textarea>
-            </div>
+                <span>Mot de passe</span>
+                <input type="text" name="" id="" formControlName="pwd" placeholder="Mot de passe">
+            </div> 
+           
+            
+            
         </div>
         <div class="radio-box">
-            <input type="radio" name="etat" id="dot-1">
-            <input type="radio" name="etat" id="dot-2">
-            <input type="radio" name="etat" id="dot-3">
-            <input type="radio" name="etat" id="dot-4">
+            <input type="radio"  formControlName="niveau" value="Diagnostic" id="dot-1">
+            <input type="radio"   formControlName="niveau" value="Attente" id="dot-2">
+            <input type="radio"   formControlName="niveau" value="Prét" id="dot-3">
+            <input type="radio"  formControlName="niveau" value="Sortie" id="dot-4">
 
             <span class="etat-title">Niveau</span>
             
@@ -89,8 +100,8 @@
         </div>
         <div class="button-box">
             <button class="add" type="submit">Ajouter</button>
-            <button class="vider" type="submit">Vider</button>
-            <button class="retour" type="submit">Retour</button>
+            <button class="vider" (click)="btn_reset()">Vider</button>
+            <button class="retour" (click)="btn_retour()">Retour</button>
         </div>
     </form>
 </div>

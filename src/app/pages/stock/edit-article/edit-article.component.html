@@ -1,0 +1,41 @@
+<div class="title">
+    <h3>Modifier Article</h3>
+</div>
+
+<div class="add-client">
+    <form [formGroup]="articleForm">
+        <h3>Editer article</h3>
+        <hr />
+        <div class="client-details">
+            <div class="input-box">
+                <span>Categorie</span>
+                <select name="type" id="type" formControlName="cat" required>
+                    <option value="">--Select categorie--</option>
+                    <option *ngFor="let category of cat" >{{category.name}}</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <span>Article</span>
+                <input type="text" name="" id="" formControlName="name" placeholder="Entrez l'article">
+            </div>
+            <div class="input-box">
+                <span>Réference</span>
+                <input type="text" name="" id="" formControlName="ref" placeholder="Tapez la reférence">
+            </div>
+            <div class="input-box">
+                <span>Prix</span>
+                <input type="number" name="" id="" formControlName="prix" placeholder="Entrez la quantité">
+            </div>
+            <div class="input-box">
+                <span>Quantité</span>
+                <input type="number" name="" id="" formControlName="qte" placeholder="Entrez la quantité">
+            </div>
+            
+        </div>
+        <div class="button-box">
+            <button class="add" type="submit" (click)="updateArticle()">Editer</button>
+            <button class="vider" (click)="btn_reste()">Vider</button>
+            <button class="retour" (click)="btn_retour()">Retour</button>
+        </div>
+    </form>
+</div>

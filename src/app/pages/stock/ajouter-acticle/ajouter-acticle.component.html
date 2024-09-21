@@ -3,50 +3,39 @@
 </div>
 
 <div class="add-client">
-    <form action="">
+    <form [formGroup]="articleForm">
         <h3>Nouveau article</h3>
         <hr />
         <div class="client-details">
             <div class="input-box">
                 <span>Categorie</span>
-                <select name="type" id="type" required>
+                <select name="type" id="type" formControlName="cat" required>
                     <option value="">--Select categorie--</option>
-                    <option value="iphone">iPhone</option>
-                    <option value="ipad">iPad</option>
-                    <option value="imac">iMac</option>
-                    <option value="macbook">MacBook</option>
-                    <option value="macstudio">MacStudio</option>
-                    <option value="macmini">MacMini</option>
-                    <option value="macpro">MacPro</option>
-                    <option value="access">Accessoires</option>
+                    <option *ngFor="let category of cat" >{{category.name}}</option>
                 </select>
             </div>
             <div class="input-box">
                 <span>Article</span>
-                <input type="text" name="" id="" placeholder="Entrez l'article">
+                <input type="text" name="" id="" formControlName="name" placeholder="Entrez l'article">
             </div>
             <div class="input-box">
                 <span>Réference</span>
-                <input type="text" name="" id="" placeholder="Tapez la reférence">
+                <input type="text" name="" id="" formControlName="ref" placeholder="Tapez la reférence">
             </div>
             <div class="input-box">
                 <span>Prix</span>
-                <input type="number" name="" id="" placeholder="Entrez la quantité">
+                <input type="number" name="" id="" formControlName="prix" placeholder="Entrez la quantité">
             </div>
             <div class="input-box">
                 <span>Quantité</span>
-                <input type="text" name="" id="" placeholder="Entrez la quantité">
-            </div>
-            <div class="input-box">
-                <span>Date d'ajout</span>
-                <input type="date" name="" id="" placeholder="Entrez la quantité">
+                <input type="number" name="" id="" formControlName="qte" placeholder="Entrez la quantité">
             </div>
             
         </div>
         <div class="button-box">
-            <button class="add" type="submit">Ajouter</button>
-            <button class="vider" type="submit">Vider</button>
-            <button class="retour" type="submit">Retour</button>
+            <button class="add" type="submit" (click)="addArticle()">Ajouter</button>
+            <button class="vider" (click)="btn_reste()">Vider</button>
+            <button class="retour" (click)="btn_retour()">Retour</button>
         </div>
     </form>
 </div>

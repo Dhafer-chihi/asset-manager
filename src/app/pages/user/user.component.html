@@ -1,21 +1,45 @@
-<div class="load">
-  <div class="table-wrapper">
-    <table datatable [dtOptions]="dtOptions" class="row-border hover">
+<div class="card-product">
+  <div class="prod-dash">
+    <h3>List des utilisateurs</h3>
+    <button (click)="btn_ajouter_user()"><i class="fa-solid fa-plus"></i></button>
+  </div>
+  <div class="table-dash">
+    <table datatable [dtTrigger]="dtTrigger" [dtOptions]="dtOptions"  class="row-border hover">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>First name</th>
-          <th>Last name</th>
+          <th>user ID</th>
+          <th>Profile</th>
+          <th>Full name</th>
+          <th>Login</th>
+          <th>Mot de passe</th>
+          <th>Date ajout</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of users ; let i=index">
-          <td>{{i}}</td>
+       @for (user of users ; track $index) {
+        <tr>
+          <td>{{user.id_user}}</td>
+          <td>{{user.profil}}</td>
           <td>{{user.fullname}}</td>
           <td>{{user.login}}</td>
+          <td>{{user.pwd}}</td>
+          <td>{{user.date_ajout | date:'dd-MM-YYYY'}}</td>
+          <td>
+            <button class="delete" (click)="deleteUser(user)"><i class="fa-solid fa-trash"></i><span class="tooltip">Supprimer</span></button>
+            <button class="show" (click)="btn_afficher_user(user.id_user)"><i class="fa-solid fa-eye"></i><span class="tooltip">Afficher</span></button>
+            <button class="edit" (click)="btn_edit_user(user.id_user)" ><i class="fa-solid fa-user-pen"></i><span class="tooltip">Modifier</span></button>
+          </td>
         </tr>
+       }
+        
       </tbody>
-    </table>
+    </table>  
+  
+  </div>
   </div>
   
-</div>
+  
+  
+  
+  

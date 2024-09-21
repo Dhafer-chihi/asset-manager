@@ -1,9 +1,11 @@
-import { Routes } from '@angular/router';
+import {  Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
+   
     {path : 'login' , component : LoginComponent},
+    {path : '' , redirectTo :'login' , pathMatch:'full'},
     {path : 'home' , component: HomeComponent , children:[
         {path : 'user' , loadChildren:()=>import('./pages/user/user-routing.module').then(m=>m.UserRoutingModule)},
         {path : 'client', loadChildren:()=>import('./pages/client/client-routing.module').then(m=>m.ClientRoutingModule)},

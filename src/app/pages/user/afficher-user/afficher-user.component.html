@@ -7,10 +7,11 @@
             <img src="../assets/img/man.png" alt="">
         </div>
         <div class="card-user-info">
-            <h2>John Doe</h2>
-            <p><span>Profile : </span> Admin</p>
-            <p><span>Login : </span> John</p>
-            <p><span>Mot de passe : </span> 0000 </p>
+            <h2>{{user.fullname}}</h2>
+            <p><span>Profile : </span> {{user.profil}}</p>
+            <p><span>Login : </span> {{user.login}}</p>
+            <p><span>Mot de passe : </span> {{user.pwd}} </p>
+            <p><span>Date d'ajout : </span> {{user.date_ajout | date:'d-M-YY'}} </p>
         </div>
         <div class="card-button">
             <button routerLink="/home/user/list-user">Retour</button>

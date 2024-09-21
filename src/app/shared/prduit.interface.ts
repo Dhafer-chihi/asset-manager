@@ -1,5 +1,6 @@
 export interface produit {
     
+    ticket : any,
     sn : any,
     cat : any,
     name : any,
@@ -13,5 +14,5 @@ export interface produit {
     panne : any,
     diag : any,
     note : any,
-    clientIdClient : any
+    clientId : any
 }

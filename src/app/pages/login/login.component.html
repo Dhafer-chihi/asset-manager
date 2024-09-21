@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div class="container">
+    <div class="login-page">
+    
+        <div class="login-img">
+            <img src="../assets/img/gestion.png" alt="">
+        </div>
+        <form [formGroup]="user">
+            <div class="login-card">
+                <div class="title">
+                    <h2>Login</h2>
+                </div>
+                <div class="input-box">
+                    <label for="">Username</label>
+                    <input type="text" formControlName="username" placeholder="Username">
+                </div>
+                <div class="input-box">
+                    <label for="">Password</label>
+                    <input type="password" formControlName="password" placeholder="Password">
+                </div>
+                <div class="buttom-box">
+                    <button type="submit" (click)="onLogin()">Login</button>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+    
+</div>

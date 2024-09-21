@@ -3,47 +3,46 @@
 </div>
 
 <div class="add-client">
-    <form action="">
+    <form [formGroup]="clientForm" (ngSubmit)="addClient()">
         <h3>Nouveau client</h3>
         <hr />
         <div class="client-details">
-            <div class="input-box">
+            <!-- <div class="input-box">
                 <span>Type</span>
-                <select name="type" id="type" required>
-                    <option value="">--Select type--</option>
-                    <option value="particulier">Particulier</option>
-                    <option value="entreprise">Entreprise</option>
+                <input type="text" name="" id="" placeholder="Tapez le type" formControlName="type">
+            </div> -->
+            <div class="input-box">
+                <span>Full Name</span>
+                <select name="" id="" formControlName="type">
+                    <option value="">-- Select Type --</option>
+                    <option *ngFor="let type of types" [ngValue]="type.name">{{type.name}}</option>
                 </select>
             </div>
             <div class="input-box">
-                <span>Nom (Entreprise/Société)</span>
-                <input type="text" name="" id="" placeholder="Tapez le nom">
+                <span>Full Name</span>
+                <input type="text" name="" id="" placeholder="Tapez le nom" formControlName="fullname">
             </div>
             <div class="input-box">
-                <span>Matricule fiscale</span>
-                <input type="text" name="" id="" placeholder="Tapez le matricule">
-            </div>
-            <div class="input-box">
-                <span>Nom et prénom</span>
-                <input type="text" name="" id="" placeholder="Tapez ">
+                <span>Identifiant</span>
+                <input type="text" name="" id="" placeholder="Tapez l'indetifiant" formControlName="identifiant">
             </div>
             <div class="input-box">
                 <span>Téléphone</span>
-                <input type="text" name="" id="" placeholder="Choisir le type">
+                <input type="text" name="" id="" placeholder="Tapez num telephone" formControlName="tel">
             </div>
             <div class="input-box">
                 <span>Email</span>
-                <input type="text" name="" id="" placeholder="Choisir le type">
+                <input type="text" name="" id="" placeholder="Tapez le mail" formControlName="email">
             </div>
             <div class="input-box">
                 <span>Note</span>
-                <textarea type="text" name="" id="" placeholder="Choisir le type"></textarea>
+                <textarea type="text" name="" id="" placeholder="Note" formControlName="note"></textarea>
             </div>
         </div>
         <div class="button-box">
             <button class="add" type="submit">Ajouter</button>
-            <button class="vider" type="submit">Vider</button>
-            <button class="retour" type="submit">Retour</button>
+            <button class="vider" (click)="onReset()" >Vider</button>
+            <button class="retour" (click)="btn_retour()">Retour</button>
         </div>
     </form>
 </div>

@@ -1,0 +1,37 @@
+<div class="title">
+    <h3>Modifier utilisateur</h3>
+</div>
+
+
+<div class="add-client">
+    <form [formGroup]="userForm" >
+        <h3>Modifier Utilisateur</h3>
+        <hr />
+        <div class="client-details">
+            <div class="input-box">
+                <span>Profile</span>
+                <input type="text" name=""  id="" formControlName="profil" placeholder="Tapez le nom et prénom">
+            </div>
+            
+            <div class="input-box">
+                <span>Nom et Prénom</span>
+                <input type="text" name=""  id="" formControlName="fullname" placeholder="Tapez le nom et prénom">
+            </div>
+            <div class="input-box">
+                <span>Login</span>
+                <input type="text" name="" id="" formControlName="login"  placeholder="Tapez le login">
+            </div>
+            <div class="input-box">
+                <span>Mot de passe</span>
+                <input type="text" name="" formControlName="pwd" id="" placeholder="Tapez le mot de passe">
+            </div>
+
+           
+        </div>
+        <div class="button-box">
+            <button class="add" (click)="update_user()">Edit</button>
+            <button class="vider" (click)="btn_vider()" >Vider</button>
+            <button class="retour" (click)="btn_retour()" >Retour</button>
+        </div>
+    </form>
+</div>

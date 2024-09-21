@@ -2,38 +2,36 @@
     <h3>Ajouter utilisateur</h3>
 </div>
 
+
 <div class="add-client">
-    <form action="">
+    <form [formGroup]="userForm"  (ngSubmit)="addUser()">
         <h3>Nouveau Utilisateur</h3>
         <hr />
         <div class="client-details">
             <div class="input-box">
                 <span>Profile</span>
-                <select name="type" id="type" required>
-                    <option value="">--Select profile--</option>
-                    <option value="particulier">Admin</option>
-                    <option value="entreprise">User</option>
-                </select>
+                <input type="text" name=""  id="" formControlName="profil" placeholder="Tapez le nom et prénom">
             </div>
+            
             <div class="input-box">
                 <span>Nom et Prénom</span>
-                <input type="text" name="" id="" placeholder="Tapez le nom et prénom">
+                <input type="text" name=""  id="" formControlName="fullname" placeholder="Tapez le nom et prénom">
             </div>
             <div class="input-box">
                 <span>Login</span>
-                <input type="text" name="" id="" placeholder="Tapez le login">
+                <input type="text" name="" id="" formControlName="login"  placeholder="Tapez le login">
             </div>
             <div class="input-box">
                 <span>Mot de passe</span>
-                <input type="text" name="" id="" placeholder="Tapez le mot de passe">
+                <input type="text" name="" formControlName="pwd" id="" placeholder="Tapez le mot de passe">
             </div>
 
            
         </div>
         <div class="button-box">
             <button class="add" type="submit">Ajouter</button>
-            <button class="vider" type="submit">Vider</button>
-            <button class="retour" type="submit">Retour</button>
+            <button class="vider" >Vider</button>
+            <button class="retour" >Retour</button>
         </div>
     </form>
 </div>

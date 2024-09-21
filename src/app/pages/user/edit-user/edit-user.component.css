@@ -1,0 +1,148 @@
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 40px;
+    
+}
+
+hr{
+    border: 1px solid black;
+}
+
+.add-client h3{
+    color:  var(--dark-blue);
+    font-size : 20px ;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.add-client{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 700px;
+    width: 100%;
+}
+
+form{
+    border: 1px solid var(--dark-grey);
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+}
+
+.add-client .client-details{
+    display: flex;
+    flex-direction: column;
+    padding: 20px
+  ;
+}
+
+
+
+
+.client-details .input-box input{
+    
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--dark-grey);
+    outline: none;
+    font-size: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.client-details .input-box textarea{
+    width: 100%;
+    height: 90px;
+    border-radius: 5px;
+    border: 1px solid var(--dark-grey);
+    border-bottom-width: 2px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    padding-top: 20px;
+}
+
+
+.client-details .input-box select{
+    
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--dark-grey);
+    outline: none;
+    font-size: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+
+.client-details .input-box span{
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.client-details .input-box input:focus ,
+.client-details .input-box input:valid{
+    border-color: var(--blue);
+}
+
+.client-details .input-box textarea:focus ,
+.client-details .input-box textarea:valid{
+    border-color: var(--blue);
+}
+
+.client-details .input-box select:focus ,
+.client-details .input-box select:valid{
+    border-color: var(--blue);
+}
+
+
+
+
+
+
+form .button-box{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+form .button-box button{
+    margin-right: 40px;
+    width: 75px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 40px;
+}
+form .button-box button:nth-child(3){
+    margin-right: 0;
+}
+
+form .button-box .add{
+    background: var(--green);
+}
+
+form .button-box .vider{
+    background: var(--ligth-yellow);
+}
+
+form .button-box .retour{
+    background: var(--red);
+}

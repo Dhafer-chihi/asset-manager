@@ -1,0 +1,48 @@
+<div class="title">
+    <h3>Modifier client</h3>
+</div>
+
+<div class="add-client">
+    <form [formGroup]="clientForm">
+        <h3>Editer client</h3>
+        <hr />
+        <div class="client-details">
+            <!-- <div class="input-box">
+                <span>Type</span>
+                <input type="text" name="" id="" placeholder="Tapez le type" formControlName="type">
+            </div> -->
+            <div class="input-box">
+                <span>Full Name</span>
+                <select name="" id="" formControlName="type">
+                    <option value="">-- Select Type --</option>
+                    <option *ngFor="let type of types" [ngValue]="type.name">{{type.name}}</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <span>Full Name</span>
+                <input type="text" name="" id="" placeholder="Tapez le nom" formControlName="fullname">
+            </div>
+            <div class="input-box">
+                <span>Identifiant</span>
+                <input type="text" name="" id="" placeholder="Tapez l'indetifiant" formControlName="identifiant">
+            </div>
+            <div class="input-box">
+                <span>Téléphone</span>
+                <input type="text" name="" id="" placeholder="Tapez num telephone" formControlName="tel">
+            </div>
+            <div class="input-box">
+                <span>Email</span>
+                <input type="text" name="" id="" placeholder="Tapez le mail" formControlName="email">
+            </div>
+            <div class="input-box">
+                <span>Note</span>
+                <textarea type="text" name="" id="" placeholder="Note" formControlName="note"></textarea>
+            </div>
+        </div>
+        <div class="button-box">
+            <button class="add" (click)="updateClient()">Editer</button>
+            <button class="vider" (click)="btn_reset()" >Vider</button>
+            <button class="retour" (click)="btn_retour()">Retour</button>
+        </div>
+    </form>
+</div>
